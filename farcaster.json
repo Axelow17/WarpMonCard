@@ -1,0 +1,23 @@
+{
+  "miniapp": {
+    "version": "1",
+    "name": "WarpMon Card",
+    "iconUrl": "https://warpmoncard.vercel.app/assets/logo.png",
+    "homeUrl": "https://warpmoncard.vercel.app/",
+    "imageUrl": "https://warpmoncard.vercel.app/assets/logo.png",
+    "buttonTitle": "🚀 Open Pack",
+    "splashImageUrl": "https://warpmoncard.vercel.app/assets/logo.png",
+    "splashBackgroundColor": "#f5f0ec",
+    "requiredChains": ["eip155:8453"],
+    "requiredCapabilities": [
+      "actions.signIn",
+      "wallet.getEthereumProvider",
+      "actions.swapToken"
+    ]
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjI1ODY2OSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEU4NUI4NTE1ZGExOGJFMDlmMTQwNzY0RDdiQjFFQ0YzQjQ4QUZDOTUifQ",
+    "payload": "eyJkb21haW4iOiJ3YXJwLW1vbi1jYXJkbGwudmVyY2VsLmFwcCJ9",
+    "signature": "Z6Qc33fIa5vHDWXhw9O/uGNAC2PJEgJ9Xe8HvFo3LyFNhwLfbyrDJgRwFaEQQ+kN5dzXddNGcFfMYf8FZMGykBs="
+  }
+}
