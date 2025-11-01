@@ -1,0 +1,134 @@
+body {
+  background: radial-gradient(circle at center, #0a0a16, #0b1120 60%, #090a12 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 2.3em;
+  text-shadow: 0 0 15px #7c3aed;
+}
+
+.menu { margin-top: 20px; }
+
+.menu button {
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.7);
+}
+.menu button:hover { transform: scale(1.05); }
+
+.cooldown-text {
+  margin-top: 5px;
+  font-size: 0.9em;
+  opacity: 0.8;
+  color: #a78bfa;
+}
+
+/* Cards */
+.card-grid, .inventory-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.card {
+  width: 160px; height: 230px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.card:hover { transform: scale(1.05); }
+
+.card-inner {
+  background: radial-gradient(circle at top, #111, #000);
+  border-radius: 16px;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+
+.card-art {
+  height: 65%;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+.card-info {
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 0.9em;
+}
+
+.card-name { font-weight: bold; }
+.card-element { font-size: 0.85em; opacity: 0.8; }
+.card-stats { display: flex; justify-content: space-around; }
+
+/* Rarity Borders */
+.card.Common { border: 3px solid #9ca3af; box-shadow: 0 0 12px rgba(156,163,175,0.5); }
+.card.Rare { border: 3px solid #3b82f6; box-shadow: 0 0 20px rgba(59,130,246,0.6); }
+.card.Epic { border: 3px solid #8b5cf6; box-shadow: 0 0 25px rgba(139,92,246,0.8); }
+.card.Legendary { border: 3px solid #facc15; box-shadow: 0 0 30px rgba(250,204,21,0.9); }
+.card.UltraLegendary { border: 3px solid #f472b6; box-shadow: 0 0 35px rgba(244,114,182,1); }
+
+.big-card { width: 200px; height: 280px; margin: 0 auto; }
+
+/* Buttons */
+.close-btn, .share-btn {
+  margin-top: 10px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.close-btn { background: #ef4444; }
+.close-btn:hover { background: #f87171; }
+
+.share-btn {
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  font-size: 0.95em;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.share-btn:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(59,130,246,0.8); }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  background: linear-gradient(160deg, #111827, #1e1b4b);
+  padding: 25px;
+  border-radius: 18px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+.hidden { display: none; }

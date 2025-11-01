@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WarpMon Card MiniApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🌌 WarpMon Card TGC</h1>
+
+    <div class="menu">
+      <button id="openPackBtn">🎁 Open Pack</button>
+      <p id="packStatus" class="cooldown-text"></p>
+      <button id="inventoryBtn">📦 Inventory</button>
+      <button id="pvpBtn">⚔️ Duel PVP</button>
+      <button id="loginFarcasterBtn">🔗 Login Farcaster</button>
+    </div>
+
+    <!-- Pack Opening -->
+    <div id="packArea" class="hidden">
+      <h2>🎁 Opening Pack...</h2>
+      <div id="cardResults" class="card-grid"></div>
+      <button id="closePackBtn" class="close-btn">❌ Close</button>
+    </div>
+
+    <!-- Inventory -->
+    <div id="inventoryArea" class="hidden">
+      <h2>📦 My Inventory</h2>
+      <div class="filter-bar">
+        <label>Filter:</label>
+        <select id="rarityFilter">
+          <option value="all">All</option>
+          <option value="Common">Common</option>
+          <option value="Rare">Rare</option>
+          <option value="Epic">Epic</option>
+          <option value="Legendary">Legendary</option>
+          <option value="UltraLegendary">UltraLegendary</option>
+        </select>
+      </div>
+      <div id="inventoryContainer" class="inventory-grid"></div>
+      <p id="inventoryCount" class="inventory-count"></p>
+      <button id="closeInventoryBtn" class="close-btn">❌ Close</button>
+    </div>
+  </div>
+
+  <!-- Card Detail Modal -->
+  <div id="cardModal" class="modal hidden">
+    <div class="modal-content">
+      <div id="modalCard" class="card big-card"></div>
+      <h3 id="modalName"></h3>
+      <p id="modalRarity"></p>
+      <div class="stat-box">
+        <p>🌪️ Element: <span id="modalElement"></span></p>
+        <p>⚔️ ATK: <span id="modalAtk"></span> | 🛡️ DEF: <span id="modalDef"></span></p>
+      </div>
+      <button id="shareCardBtn" class="share-btn">📤 Share to Farcaster</button>
+      <button id="closeModalBtn" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- PVP Modal -->
+  <div id="pvpModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>⚔️ Player vs Player</h2>
+      <p>Your FID: <span id="myFID"></span></p>
+      <p>Opponent: <span id="opponentFID"></span></p>
+      <button id="startBattleBtn" class="close-btn">Start Battle</button>
+      <p id="battleResult"></p>
+      <button id="closePvpBtn" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
